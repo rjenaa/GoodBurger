@@ -1,11 +1,10 @@
-html,body
+/* html,body
 {
     width: 100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    
     overflow-x: hidden; 
-}
+} */
 .description{
     color: #444;
     font-size: small;
@@ -15,19 +14,18 @@ html,body
 
 }
 td, th{
-    border: 2px solid black;
+    border: 1px solid black;
 }
 table{
-    border-collapse: collapse;
+    
     width: 100%;
     display: table;
-   
+    border-collapse: collapse;
     table-layout: fixed;
-    
+    padding: 0;
+    margin: 0;
 }
-table tr th, table tr td{
-    width: auto;
-}
+
 img{
     width: 100px;
     height: 75px;
@@ -42,13 +40,35 @@ header{
     padding-bottom: 30px;
     background-color: navy;
     color: white;
-    font-size: larger;
+    font-size: x-large;
+    text-shadow: 2px 2px black;
 }
 .card-header{
     padding-top: 20px;
+    font-size: larger;
+    font-weight: bold;
 }
 .description.add1{
     color: red;
     font-style: italic;
 }
+
+input{
+    margin-top: 10px;
+}
+
+footer{
+    background-color: navy;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+tr:nth-child(1){
+    background-color: yellow;
+}
+
 

@@ -42,31 +42,26 @@ Welcome to GoodBurger's Online Menu!
     <div class="card-header">Today, we are serving fries, burgers, and sodas!</div>
     <div class="card-body">
       <h5 class="card-title">Please select the quantity:</h5>
-      <table class="table table-bordered"*ngFor = "let foodMenu of foodMenu">
-        <thead>
-      
-          </thead>
+      <table class="table table-bordered">
           
             <tbody>
-                <tr>
+                <tr *ngFor = "let foodMenu of foodMenu">
                   <th scope="row"><img [src]="foodMenu.image" alt=""></th>
-                  <td>{{foodMenu.name}}
+                  <td class = "name">{{foodMenu.name}}
                     <br>
                     {{foodMenu.Description}}
                     <br>
                   <p class = "description-add"  *ngIf="foodMenu.Quantity > 0">You'll love our {{foodMenu.name}}</p>
-                  <p class = "description-add1" *ngIf="foodMenu.Quantity === 0">No {{foodMenu.name}} today :(</p>
+                  <p class = "description-add" *ngIf="foodMenu.Quantity === 0">No {{foodMenu.name}} today :(</p>
                   </td>
                   <td><p class = "price">{{foodMenu.Price | currency: 'EUR'}}</p></td>
                   <td>
                   <!-- <button (click)="addPrice(foodMenu);addItem(foodMenu)" type="number">+</button> -->
-                  <button (click)="addPrice(foodMenu);addItem(foodMenu)" type="button" class="btn btn-primary">+</button>
+                  <button (click)="addPrice(foodMenu);addItem(foodMenu)" type="button" class="btn btn-primary btn-sm">+</button>
                   <input #input type="number" min="0" oninput="validity.valid||(value='');" [(ngModel)] = "foodMenu.Quantity" (keyup) = "updateQuantity();updateTotal(foodMenu)">
-                  <button (click)="subPrice(foodMenu);subItem(foodMenu)" type="button" class="btn btn-primary">-</button>
+                  <button (click)="subPrice(foodMenu);subItem(foodMenu)" type="button" class="btn btn-primary btn-sm">-</button>
                   <!-- <button (click)="subPrice(foodMenu);subItem(foodMenu)" type="number">-</button> -->
                   </td>
-                
-              
                 </tr>
             </tbody>
           
@@ -83,6 +78,9 @@ Welcome to GoodBurger's Online Menu!
 
   <!-- Footer -->
 
+  <footer>
+    <span>Thank you for your Patronage! This is brought to you by Dallas, Ray, and Darren.</span>
+  </footer>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
