@@ -17,7 +17,7 @@ export class AppComponent {
   foodMenu = [{
     "name": "Fries",
     "Description": "Oily, Salty and hot",
-    "Price": 50.00,
+    "Price": 5.00,
     "Quantity": 0,
     "image": "https://cdn2.vectorstock.com/i/1000x1000/32/11/fast-food-french-fries-cartoon-flat-style-vector-17703211.jpg"
 
@@ -25,14 +25,14 @@ export class AppComponent {
   {
     "name": "Burger",
     "Description": "Beefy, fresh, & hot",
-    "Price": 10.00,
+    "Price": 1.00,
     "Quantity": 0,
     "image": "https://illustoon.com/photo/4728.png"
   },
   {
     "name": "Soda",
     "Description": "Sweeter than water",
-    "Price": 30.00,
+    "Price": 3.00,
     "Quantity": 0,
     "image": "https://previews.123rf.com/images/aratehortua/aratehortua1712/aratehortua171200397/91965484-vector-cartoon-soda-cup-isolated-on-white-background.jpg"
   }]
